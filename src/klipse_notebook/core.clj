@@ -46,4 +46,16 @@
   (spit "notebook.html"
         (str (header title) (apply str content) footer)))
 
+
+; create or update notebook.html
 ; (notebook "Page Title")
+
+; create or update snippet
+(defn snippet [n s]
+  (spit (str "resources/content/" n) s))
+
+; pass snippet number as integer and content as string
+; (snippet 1 "(+ 6 5 7)")
+
+; quotes must be escaped
+; (snippet 1 "\"here is a string\"")
